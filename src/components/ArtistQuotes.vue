@@ -1,24 +1,21 @@
 <template>
-  <div id="features">
+  <div id="artist-quotes">
     <div class="container">
-      <div>
-        <h2>VoxEdit features</h2>
-        <Feature />
-      </div>
+      <h2>Quote Artist</h2>
+      <ArtistQuote />
     </div>
   </div>
 </template>
 <script>
-import Feature from "./mini-components/Feature";
+import ArtistQuote from "./mini-components/ArtistQuote";
 export default {
   components: {
-    Feature
+    ArtistQuote
   }
 };
 </script>
-
 <style lang="scss" scoped>
-#features {
+#artist-quotes {
   background: $medium-grey;
   padding: 40px 0;
   h2 {

@@ -4,7 +4,7 @@
     <Banner />
     <Features />
     <ArtistCreations />
-    <QuoteArtist />
+    <ArtistQuotes />
     <Join />
     <Footer />
   </div>
@@ -15,7 +15,7 @@ import Header from "@/components/Header";
 import Banner from "@/components/Banner";
 import Features from "@/components/Features";
 import ArtistCreations from "@/components/ArtistCreations";
-import QuoteArtist from "@/components/QuoteArtist";
+import ArtistQuotes from "@/components/ArtistQuotes";
 import Join from "@/components/Join";
 import Footer from "@/components/Footer";
 export default {
@@ -28,7 +28,7 @@ export default {
     Header,
     Banner,
     ArtistCreations,
-    QuoteArtist,
+    ArtistQuotes,
     Join,
     Footer
   }
