@@ -12,7 +12,11 @@
           <li><a href="#">FAQs</a></li>
           <li><a href="#">Feedback</a></li>
         </ul>
-        <span>EN</span>
+        <div class="languaje">
+          <img src="../assets/img/en-flag.png" alt="" />
+          <p>EN</p>
+          <img src="../assets/img/arrow-dropdown.svg" alt="" />
+        </div>
       </div>
     </div>
   </div>
@@ -33,6 +37,20 @@ export default {};
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
+    .languaje {
+      cursor: pointer;
+      display: flex;
+      flex-direction: row;
+      background: #3b4148;
+      padding: 10px 0;
+      border-radius: 15px;
+      p {
+        font-weight: 600;
+      }
+      img {
+        padding: 0 10px;
+      }
+    }
   }
   ul {
     display: flex;
@@ -40,6 +58,7 @@ export default {};
     align-items: center;
   }
   a {
+    font-weight: 600;
     color: $light-gray;
     padding-right: 20px;
   }

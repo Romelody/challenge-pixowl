@@ -1,7 +1,7 @@
 <template>
   <div id="artist-creations">
-    <div class="container">
-      <h2>Artist Creations</h2>
+    <div class="container padding-y">
+      <h2>What our Artists are creating</h2>
       <ArtistCreation />
     </div>
   </div>
@@ -18,12 +18,5 @@ export default {
 #artist-creations {
   background: $dark-grey;
   padding: 40px 0;
-  h2 {
-    color: $white;
-    font-size: 30px;
-    display: flex;
-    justify-content: center;
-    padding-bottom: 20px;
-  }
 }
 </style>

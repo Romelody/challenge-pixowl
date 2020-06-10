@@ -1,7 +1,7 @@
 <template>
   <div id="artist-quotes">
-    <div class="container">
-      <h2>Quote Artist</h2>
+    <div class="container padding-y">
+      <h2>Quotes from voxel artists</h2>
       <ArtistQuote />
     </div>
   </div>
@@ -17,7 +17,6 @@ export default {
 <style lang="scss" scoped>
 #artist-quotes {
   background: $medium-grey;
-  padding: 40px 0;
   h2 {
     color: $white;
     font-size: 30px;

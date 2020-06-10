@@ -1,20 +1,27 @@
 <template>
-  <div id="feature">
+  <div id="feature" :style="{ backgroundImage: `url(${bgImage})` }">
     <div class="text-component">
       <h3>
-        <strong>{{ titleFeature }}Modeler</strong>
+        <strong>{{ titleFeature }}</strong>
       </h3>
       <p>
-        {{ textFeature }}Make the most of your creativity! From beginners to
-        experts, anyone can make amazing creations thanks to our robust set of
-        tools and our user-friendly interface.
+        {{ textFeature }}
       </p>
     </div>
   </div>
 </template>
+<script>
+export default {
+  name: "Feature",
+  props: {
+    titleFeature: String,
+    textFeature: String,
+    bgImage: String
+  }
+};
+</script>
 <style lang="scss" scoped>
 #feature {
-  background-image: url(../../assets/img/feature-01.png);
   background-repeat: no-repeat;
   background-size: 400px 410px;
   width: 400px;

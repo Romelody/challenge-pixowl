@@ -26,10 +26,12 @@
   height: 100%;
   width: 50%;
   color: $white;
+  font-family: "montserratRegular";
 
   h1 {
     font-size: 50px;
     margin-bottom: 18px;
+    font-weight: 700;
   }
   p {
     font-size: 20px;
@@ -38,11 +40,12 @@
   .btn {
     background: $blue;
     color: $white;
-    font-size: 25px;
+    font-size: 22px;
     text-align: center;
     width: 250px;
     padding: 10px;
     border-radius: 25px;
+    font-weight: 700;
   }
 }
 </style>
