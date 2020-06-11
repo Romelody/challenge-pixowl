@@ -114,7 +114,7 @@
 .copyright {
   background: $black;
   text-align: center;
-  padding: 10px;
+  padding: 20px;
   color: $medium-grey;
 }
 </style>

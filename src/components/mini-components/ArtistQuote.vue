@@ -2,17 +2,29 @@
   <div id="artist-quote">
     <div class="content">
       <div class="quote">
-        <div class="artist-art">
+        <div
+          class="artist-art"
+          :class="
+            `${avatarPosition}` === 'right'
+              ? 'right-direction'
+              : 'left-direction'
+          "
+        >
           <img src="../../assets/img/quote-william.png" alt="" />
           <div class="diamond"></div>
         </div>
-        <div class="artist-quote">
+        <div
+          class="artist-quote"
+          :class="
+            `${avatarPosition}` === 'right' ? 'right-padding' : 'left-padding'
+          "
+          :style="{ background: `${backgroundColor}` }"
+        >
           <p class="text">
-            "VoxEdit has impressed me, since it's the fusion of a modeling
-            editor with an animation system all in the same software."
+            {{ textQuote }}
           </p>
           <p class="professional">
-            <span class="artist-name">Zach Soares</span> - Professional Voxel
+            <span class="artist-name">{{ artistName }}</span> - {{ artistJob }}
             Artist
           </p>
         </div>
@@ -20,12 +32,25 @@
     </div>
   </div>
 </template>
+
+<script>
+export default {
+  name: "ArtistQuote",
+  props: {
+    textQuote: String,
+    artistName: String,
+    artistJob: String,
+    avatarPosition: String,
+    backgroundColor: String
+  }
+};
+</script>
+
 <style lang="scss" scoped>
 #artist-quote {
   background: $medium-grey;
-  padding: 40px 0;
+  padding: 16px 0;
   margin: 20px 0;
-  width: 50%;
   .content {
     display: flex;
     flex-direction: row;
@@ -39,12 +64,18 @@
     align-items: center;
     justify-content: center;
     z-index: 3;
-    left: 0;
     img {
       z-index: 3;
       position: absolute;
     }
   }
+  .left-direction {
+    left: 0;
+  }
+  .right-direction {
+    right: 0;
+  }
+
   .diamond {
     background: $dark-grey;
     width: 130px;
@@ -61,15 +92,21 @@
     flex-direction: row;
     align-items: center;
     .artist-quote {
-      margin-left: 80px;
-      padding: 20px 60px 20px 80px;
-      background: $dark-grey;
+      /* background: $dark-grey; */
       border-radius: 10px;
       box-shadow: 0px 3px 6px #00000029;
       color: $white;
       .text {
         padding-bottom: 15px;
       }
+    }
+    .right-padding {
+      margin-right: 73px;
+      padding: 32px 120px 32px 20px;
+    }
+    .left-padding {
+      margin-left: 73px;
+      padding: 32px 60px 32px 80px;
     }
     .professional {
       color: $light-gray;
