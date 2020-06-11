@@ -3,13 +3,15 @@
     <div class="container padding-y">
       <div>
         <h2>VoxEdit features</h2>
-        <Feature
-          v-for="feature in features"
-          :key="feature.id"
-          :titleFeature="feature.titleFeature"
-          :textFeature="feature.textFeature"
-          :bgImage="feature.bgImage"
-        />
+        <div class="features-container">
+          <Feature
+            v-for="feature in features"
+            :key="feature.id"
+            :titleFeature="feature.titleFeature"
+            :textFeature="feature.textFeature"
+            :bgImage="feature.bgImage"
+          />
+        </div>
       </div>
     </div>
   </div>
@@ -34,14 +36,14 @@ export default {
           bgImage: image1
         },
         {
-          id: 0,
+          id: 1,
           titleFeature: "Animator",
           textFeature:
             "A game changer in the voxel creation world. With our Skeleton System, VoxEdit allows you to rig and animate anything that you want using the timeline via an easy-to-use keyframing mode.",
           bgImage: image2
         },
         {
-          id: 0,
+          id: 2,
           titleFeature: "Block Editor",
           textFeature:
             "Section to create the fundamental building blocks of the SandBox 3! Each block measures 32 voxels, there are Solid or Liquid blocks with inner properties.",
@@ -56,5 +58,9 @@ export default {
 <style lang="scss" scoped>
 #features {
   background: $medium-grey;
+  .features-container {
+    display: flex;
+    justify-content: space-between;
+  }
 }
 </style>

@@ -36,7 +36,7 @@ h2 {
   font-weight: 800;
   display: flex;
   justify-content: center;
-  padding-bottom: 20px;
+  padding-bottom: 30px;
 }
 .container {
   width: 90%;
