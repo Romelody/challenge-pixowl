@@ -2,7 +2,10 @@
   <div id="artist-creations">
     <div class="container padding-y">
       <h2>What our Artists are creating</h2>
-      <div class="creation-container">
+
+      <div
+        :class="tabletView ? 'creation-container-tablet' : 'creation-container'"
+      >
         <ArtistCreation
           v-for="artistCreation in artistCreations"
           :key="artistCreation.id"
@@ -61,6 +64,9 @@ export default {
         }
       ]
     };
+  },
+  props: {
+    tabletView: Boolean
   }
 };
 </script>
@@ -72,6 +78,12 @@ export default {
   .creation-container {
     display: flex;
     justify-content: space-between;
+  }
+  .creation-container-tablet {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    justify-items: center;
+    grid-gap: 32px 32px;
   }
 }
 </style>

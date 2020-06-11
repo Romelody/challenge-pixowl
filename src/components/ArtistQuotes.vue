@@ -63,6 +63,9 @@ export default {
         }
       ]
     };
+  },
+  props: {
+    tabletView: Boolean
   }
 };
 </script>

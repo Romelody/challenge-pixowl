@@ -1,12 +1,12 @@
 <template>
   <div class="Home">
-    <Header />
-    <Banner />
-    <Features />
-    <ArtistCreations />
-    <ArtistQuotes />
-    <Join />
-    <Footer />
+    <Header :tabletView="tabletView" />
+    <Banner :tabletView="tabletView" />
+    <Features :tabletView="tabletView" />
+    <ArtistCreations :tabletView="tabletView" />
+    <ArtistQuotes :tabletView="tabletView" />
+    <Join v-if="!tabletView" />
+    <Footer v-if="!tabletView" />
   </div>
 </template>
 
@@ -21,7 +21,8 @@ import Footer from "@/components/Footer";
 export default {
   name: "Home",
   props: {
-    msg: String
+    msg: String,
+    tabletView: Boolean
   },
   components: {
     Features,

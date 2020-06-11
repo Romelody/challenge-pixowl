@@ -5,9 +5,7 @@
         <div
           class="artist-art"
           :class="
-            `${avatarPosition}` === 'right'
-              ? 'right-direction'
-              : 'left-direction'
+            avatarPosition === 'right' ? 'right-direction' : 'left-direction'
           "
         >
           <img src="../../assets/img/quote-william.png" alt="" />
@@ -15,10 +13,8 @@
         </div>
         <div
           class="artist-quote"
-          :class="
-            `${avatarPosition}` === 'right' ? 'right-padding' : 'left-padding'
-          "
-          :style="{ background: `${backgroundColor}` }"
+          :class="avatarPosition === 'right' ? 'right-padding' : 'left-padding'"
+          :style="{ background: backgroundColor }"
         >
           <p class="text">
             {{ textQuote }}
