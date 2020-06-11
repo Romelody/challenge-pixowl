@@ -2,7 +2,7 @@
   <div id="artist-quotes">
     <div class="container padding-y">
       <h2>Quotes from voxel artists</h2>
-      <div class="quotes-container">
+      <div :class="tabletView ? 'quotes-container-tablet' : 'quotes-container'">
         <ArtistQuote
           v-for="artistQuote in artistQuotes"
           :key="artistQuote.id"
@@ -75,6 +75,11 @@ export default {
   .quotes-container {
     display: grid;
     grid-template-columns: 1fr 1fr;
+    grid-gap: 0 32px;
+  }
+  .quotes-container-tablet {
+    display: grid;
+    grid-template-columns: 1fr;
     grid-gap: 0 32px;
   }
 }

@@ -23,11 +23,19 @@
 </template>
 
 <script>
-export default {};
+export default {
+  props: {
+    tabletView: Boolean
+  }
+};
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped lang="scss">
+.header-container {
+}
+.header-container-tablet {
+}
 #header {
   background: $black;
   color: $light-grey;

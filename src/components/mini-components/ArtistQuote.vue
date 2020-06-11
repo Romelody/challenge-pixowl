@@ -109,7 +109,7 @@ export default {
     }
     .artist-name {
       color: $blue;
-      font-family: bold;
+      font-weight: 600;
     }
   }
 }
