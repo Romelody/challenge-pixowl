@@ -88,7 +88,7 @@
     font-size: 20px;
     a {
       margin-bottom: 15px;
-      color: $light-gray;
+      color: $light-grey;
       &:hover {
         color: $white;
         font-family: bold;

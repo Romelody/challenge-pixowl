@@ -31,7 +31,7 @@
   }
   .subtitle {
     text-align: center;
-    color: $light-gray;
+    color: $light-grey;
     font-size: 20px;
     padding-bottom: 20px;
   }

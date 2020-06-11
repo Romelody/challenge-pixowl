@@ -105,7 +105,7 @@ export default {
       padding: 32px 60px 32px 80px;
     }
     .professional {
-      color: $light-gray;
+      color: $light-grey;
     }
     .artist-name {
       color: $blue;

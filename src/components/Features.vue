@@ -3,13 +3,18 @@
     <div class="container padding-y">
       <div>
         <h2>VoxEdit features</h2>
-        <div class="features-container">
+        <div
+          :class="
+            tabletView ? 'features-container-tablet' : 'features-container'
+          "
+        >
           <Feature
             v-for="feature in features"
             :key="feature.id"
             :titleFeature="feature.titleFeature"
             :textFeature="feature.textFeature"
             :bgImage="feature.bgImage"
+            :tabletView="tabletView"
           />
         </div>
       </div>
@@ -51,6 +56,9 @@ export default {
         }
       ]
     };
+  },
+  props: {
+    tabletView: Boolean
   }
 };
 </script>
@@ -61,6 +69,11 @@ export default {
   .features-container {
     display: flex;
     justify-content: space-between;
+  }
+  .features-container-tablet {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
   }
 }
 </style>

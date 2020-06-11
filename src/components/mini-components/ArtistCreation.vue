@@ -57,7 +57,7 @@ export default {
         font-size: 18px;
       }
       p {
-        color: $light-gray;
+        color: $light-grey;
         font-size: 15px;
       }
     }
@@ -72,7 +72,7 @@ export default {
       height: 30px;
       border-radius: 25px;
       background: $grey-add;
-      border: 1px solid $light-gray;
+      border: 1px solid $light-grey;
     }
   }
 }

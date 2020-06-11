@@ -30,7 +30,7 @@ export default {};
 <style scoped lang="scss">
 #header {
   background: $black;
-  color: $light-gray;
+  color: $light-grey;
   .header {
     padding: 15px 0;
     display: flex;
@@ -59,7 +59,7 @@ export default {};
   }
   a {
     font-weight: 600;
-    color: $light-gray;
+    color: $light-grey;
     padding-right: 20px;
   }
 }
