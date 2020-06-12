@@ -2,8 +2,7 @@
   <div
     id="feature"
     :style="{
-      backgroundImage: tabletView ? 'none' : `url(${bgImage})`,
-      background: tabletView ? '#282E36' : 'none',
+      background: tabletView ? '#282E36' : `url(${bgImage})`,
       borderRadius: tabletView ? '8px' : 'none'
     }"
     :class="tabletView ? 'background-image-tablet' : 'background-image'"
