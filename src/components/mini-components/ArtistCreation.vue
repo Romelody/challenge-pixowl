@@ -8,11 +8,19 @@
         <h3>
           <strong>{{ titleArt }}</strong>
         </h3>
-        <p class="nickname">{{ textArt }}</p>
-        <div class="more-artist-info">
+        <p class="nickname" v-if="tabletView">75/300</p>
+        <p class="nickname" v-else>{{ textArt }}</p>
+        <div class="money" v-if="tabletView">
+          <img src="@/assets/img/sand-icon.svg" />
+          <p>700</p>
+        </div>
+        <div
+          :class="tabletView ? 'more-artist-info-tablet' : 'more-artist-info'"
+        >
           <img src="@/assets/img/add.svg" alt="" />
         </div>
       </div>
+      <div class="runner" v-if="tabletView"></div>
     </div>
   </div>
 </template>
@@ -22,7 +30,8 @@ export default {
   props: {
     titleArt: String,
     textArt: String,
-    imgArt: String
+    imgArt: String,
+    tabletView: Boolean
   }
 };
 </script>
@@ -30,6 +39,7 @@ export default {
 #artistCreation {
   .art-card {
     width: 200px;
+    position: relative;
     .art-img {
       width: 200px;
       height: 170px;
@@ -61,6 +71,20 @@ export default {
         font-size: 15px;
       }
     }
+    .money {
+      position: absolute;
+      display: flex;
+      justify-content: space-between;
+      width: 35%;
+      align-items: center;
+      bottom: 8px;
+      left: 8px;
+      p {
+        color: $yellow;
+        font-size: 20px;
+        font-weight: 600;
+      }
+    }
     .more-artist-info {
       position: absolute;
       display: flex;
@@ -72,7 +96,28 @@ export default {
       height: 30px;
       border-radius: 25px;
       background: $grey-add;
-      border: 1px solid $light-grey;
+      border: 1px solid $art-light-grey;
+    }
+    .more-artist-info-tablet {
+      position: absolute;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      bottom: 8px;
+      right: 8px;
+      width: 42px;
+      height: 42px;
+      border-radius: 25px;
+      background: $grey-add;
+    }
+    .runner {
+      width: 30px;
+      height: 30px;
+      border-radius: 50%;
+      background: $medium-grey;
+      position: absolute;
+      top: 10px;
+      left: 10px;
     }
   }
 }

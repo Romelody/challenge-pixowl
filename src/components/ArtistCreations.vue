@@ -12,6 +12,7 @@
           :titleArt="artistCreation.titleArt"
           :textArt="artistCreation.textArt"
           :imgArt="artistCreation.imgArt"
+          :tabletView="tabletView"
         />
       </div>
     </div>
