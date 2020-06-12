@@ -78,7 +78,7 @@
     color: $white;
     font-size: 25px;
     text-transform: uppercase;
-    font-family: extrabold;
+    font-weight: 800;
     padding-bottom: 24px;
   }
   .list-pages {
@@ -91,7 +91,7 @@
       color: $light-grey;
       &:hover {
         color: $white;
-        font-family: bold;
+        font-weight: 600;
       }
     }
   }
@@ -102,6 +102,19 @@
     }
     :last-child {
       padding-right: 0px;
+    }
+    img {
+      &:hover {
+        @keyframes spin {
+          from {
+            transform: rotate(0deg);
+          }
+          to {
+            transform: rotate(360deg);
+          }
+        }
+        animation: spin 2s;
+      }
     }
     a {
       cursor: pointer;

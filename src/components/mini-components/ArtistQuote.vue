@@ -8,7 +8,7 @@
             avatarPosition === 'right' ? 'right-direction' : 'left-direction'
           "
         >
-          <img src="../../assets/img/quote-william.png" alt="" />
+          <img :src="imgArtist" alt="" />
           <div class="diamond"></div>
         </div>
         <div
@@ -37,7 +37,8 @@ export default {
     artistName: String,
     artistJob: String,
     avatarPosition: String,
-    backgroundColor: String
+    backgroundColor: String,
+    imgArtist: String
   }
 };
 </script>
@@ -88,7 +89,10 @@ export default {
     flex-direction: row;
     align-items: center;
     .artist-quote {
-      /* background: $dark-grey; */
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      height: 160px;
       border-radius: 10px;
       box-shadow: 0px 3px 6px #00000029;
       color: $white;
@@ -102,7 +106,7 @@ export default {
     }
     .left-padding {
       margin-left: 73px;
-      padding: 32px 60px 32px 80px;
+      padding: 32px 6px 32px 80px;
     }
     .professional {
       color: $light-grey;

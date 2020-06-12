@@ -25,7 +25,7 @@
   }
   img {
     position: absolute;
-    left: 70px;
+    left: 23px;
     top: 0;
     height: 100%;
   }
@@ -44,6 +44,7 @@
     text-transform: uppercase;
     color: $white;
     padding: 10px;
+    font-weight: 800;
     border-radius: 35px;
   }
 }

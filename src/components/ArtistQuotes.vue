@@ -11,6 +11,7 @@
           :artistJob="artistQuote.artistJob"
           :avatarPosition="artistQuote.avatarPosition"
           :backgroundColor="artistQuote.backgroundColor"
+          :imgArtist="artistQuote.imgArtist"
         />
       </div>
     </div>
@@ -18,6 +19,10 @@
 </template>
 <script>
 import ArtistQuote from "./mini-components/ArtistQuote";
+import imageArtistWilliam from "../assets/img/quote-william.png";
+import imageArtistAlex from "../assets/img/quote-alex.png";
+import imageArtistZach from "../assets/img/quote-zach.png";
+import imageArtistNicolas from "../assets/img/quote-nicolas.png";
 export default {
   components: {
     ArtistQuote
@@ -29,37 +34,41 @@ export default {
           id: 0,
           textQuote:
             "VoxEdit has impressed me, since it's the fusion of a modeling editor with an animation system all in the same software.",
-          artistName: "Zach Soares",
-          artistJob: "Professional Voxel",
+          artistName: "William Santacruz",
+          artistJob: "Professional Voxel Artist",
           avatarPosition: "left",
-          backgroundColor: "#282E36"
+          backgroundColor: "#282E36",
+          imgArtist: imageArtistWilliam
         },
         {
           id: 1,
           textQuote:
-            "VoxEdit has impressed me, since it's the fusion of a modeling editor with an animation system all in the same software.",
-          artistName: "Zach Soares",
-          artistJob: "Professional Voxel",
+            "VoxEdit is a game changer for voxel artists looking to animatie, being the only dedicated voxel editor that features skeletal rigging and timeline animation.",
+          artistName: "Alex Florezz",
+          artistJob: "Professional Voxel Artist",
           avatarPosition: "right",
-          backgroundColor: "#2F3740"
+          backgroundColor: "#2F3740",
+          imgArtist: imageArtistAlex
         },
         {
           id: 2,
           textQuote:
-            "VoxEdit has impressed me, since it's the fusion of a modeling editor with an animation system all in the same software.",
+            "It shows some excellent promise in the direction it's going with a dedicated team. Adding a full functioning animation system within the editor makes it stand out from the rest!",
           artistName: "Zach Soares",
           artistJob: "Professional Voxel",
           avatarPosition: "left",
-          backgroundColor: "#2F3740"
+          backgroundColor: "#2F3740",
+          imgArtist: imageArtistZach
         },
         {
           id: 3,
           textQuote:
-            "VoxEdit has impressed me, since it's the fusion of a modeling editor with an animation system all in the same software.",
-          artistName: "Zach Soares",
+            "One of the easier tool to create animations in voxel art, with an attractive and a very simple easy-to-use interface for beginners.",
+          artistName: "Nicolas Morrone",
           artistJob: "Professional Voxel",
           avatarPosition: "right",
-          backgroundColor: "#282E36"
+          backgroundColor: "#282E36",
+          imgArtist: imageArtistNicolas
         }
       ]
     };
