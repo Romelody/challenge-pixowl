@@ -1,7 +1,11 @@
 <template>
   <div
     id="feature"
-    :style="{ backgroundImage: `url(${bgImage})` }"
+    :style="{
+      backgroundImage: tabletView ? 'none' : `url(${bgImage})`,
+      background: tabletView ? '#282E36' : 'none',
+      borderRadius: tabletView ? '8px' : 'none'
+    }"
     :class="tabletView ? 'background-image-tablet' : 'background-image'"
   >
     <div :class="tabletView ? 'text-component-tablet' : 'text-component'">
