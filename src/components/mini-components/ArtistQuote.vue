@@ -4,22 +4,30 @@
       <div class="quote">
         <div
           class="artist-art"
-          :class="
-            avatarPosition === 'right' ? 'right-direction' : 'left-direction'
-          "
+          :class="[
+            avatarPosition === 'right' ? 'right-direction' : 'left-direction',
+            { 'avatar-top': tabletView }
+          ]"
         >
           <img :src="imgArtist" alt="" />
           <div class="diamond"></div>
         </div>
         <div
-          class="artist-quote"
-          :class="avatarPosition === 'right' ? 'right-padding' : 'left-padding'"
+          :class="[
+            tabletView ? 'artist-quote-tablet' : 'artist-quote',
+            avatarPosition === 'right' ? 'right-padding' : 'left-padding'
+          ]"
           :style="{ background: backgroundColor }"
         >
-          <p class="text">
+          <p :class="avatarPosition === 'right' ? 'text-align' : 'text'">
             {{ textQuote }}
           </p>
-          <p class="professional">
+          <p
+            class="professional"
+            :class="{
+              'professional-no-align': avatarPosition === 'left' && !tabletView
+            }"
+          >
             <span class="artist-name">{{ artistName }}</span> - {{ artistJob }}
             Artist
           </p>
@@ -38,7 +46,8 @@ export default {
     artistJob: String,
     avatarPosition: String,
     backgroundColor: String,
-    imgArtist: String
+    imgArtist: String,
+    tabletView: Boolean
   }
 };
 </script>
@@ -52,6 +61,7 @@ export default {
     display: flex;
     flex-direction: row;
     align-items: center;
+    justify-content: center;
     position: relative;
   }
   .artist-art {
@@ -67,12 +77,14 @@ export default {
     }
   }
   .left-direction {
-    left: 0;
+    left: 30px;
   }
   .right-direction {
-    right: 0;
+    right: 30px;
   }
-
+  .avatar-top {
+    top: 10px;
+  }
   .diamond {
     background: $dark-grey;
     width: 130px;
@@ -88,6 +100,7 @@ export default {
     display: flex;
     flex-direction: row;
     align-items: center;
+    width: 99%;
     .artist-quote {
       display: flex;
       flex-direction: column;
@@ -98,6 +111,34 @@ export default {
       color: $white;
       .text {
         padding-bottom: 15px;
+        padding-left: 34px;
+        font-size: 15px;
+        width: 90%;
+      }
+      .text-align {
+        padding-bottom: 15px;
+        font-size: 15px;
+        width: 90%;
+      }
+    }
+    .artist-quote-tablet {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      height: 240px;
+      border-radius: 10px;
+      box-shadow: 0px 3px 6px #00000029;
+      color: $white;
+      .text {
+        padding-bottom: 15px;
+        padding-left: 40px;
+        font-size: 20px;
+        width: 80%;
+      }
+      .text-align {
+        padding-bottom: 15px;
+        font-size: 20px;
+        width: 80%;
       }
     }
     .right-padding {
@@ -110,6 +151,9 @@ export default {
     }
     .professional {
       color: $light-grey;
+    }
+    .professional-no-align {
+      padding-left: 34px;
     }
     .artist-name {
       color: $blue;

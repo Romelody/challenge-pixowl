@@ -12,6 +12,7 @@
           :avatarPosition="artistQuote.avatarPosition"
           :backgroundColor="artistQuote.backgroundColor"
           :imgArtist="artistQuote.imgArtist"
+          :tabletView="tabletView"
         />
       </div>
     </div>
@@ -33,7 +34,7 @@ export default {
         {
           id: 0,
           textQuote:
-            "VoxEdit has impressed me, since it's the fusion of a modeling editor with an animation system all in the same software.",
+            '"VoxEdit has impressed me, since it\'s the fusion of a modeling editor with an animation system all in the same software."',
           artistName: "William Santacruz",
           artistJob: "Professional Voxel Artist",
           avatarPosition: "left",
@@ -43,7 +44,7 @@ export default {
         {
           id: 1,
           textQuote:
-            "VoxEdit is a game changer for voxel artists looking to animatie, being the only dedicated voxel editor that features skeletal rigging and timeline animation.",
+            '"VoxEdit is a game changer for voxel artists looking to animatie, being the only dedicated voxel editor that features skeletal rigging and timeline animation."',
           artistName: "Alex Florezz",
           artistJob: "Professional Voxel Artist",
           avatarPosition: "right",
@@ -53,21 +54,21 @@ export default {
         {
           id: 2,
           textQuote:
-            "It shows some excellent promise in the direction it's going with a dedicated team. Adding a full functioning animation system within the editor makes it stand out from the rest!",
+            '"It shows some excellent promise in the direction it\'s going with a dedicated team. Adding a full functioning animation system within the editor makes it stand out from the rest!"',
           artistName: "Zach Soares",
           artistJob: "Professional Voxel",
           avatarPosition: "left",
-          backgroundColor: "#2F3740",
+          backgroundColor: this.tabletView ? "#282E36" : "#2F3740",
           imgArtist: imageArtistZach
         },
         {
           id: 3,
           textQuote:
-            "One of the easier tool to create animations in voxel art, with an attractive and a very simple easy-to-use interface for beginners.",
+            '"One of the easier tool to create animations in voxel art, with an attractive and a very simple easy-to-use interface for beginners."',
           artistName: "Nicolas Morrone",
           artistJob: "Professional Voxel",
           avatarPosition: "right",
-          backgroundColor: "#282E36",
+          backgroundColor: this.tabletView ? "#2F3740" : "#282E36",
           imgArtist: imageArtistNicolas
         }
       ]
